@@ -1,6 +1,6 @@
 package com.example.carfactory.message;
 
-import com.example.carfactory.config.MessageConfig;
+import com.example.carfactory.config.Constants;
 import com.example.carfactory.domain.Order;
 import com.example.carfactory.dto.OrderDTO;
 import com.example.carfactory.service.OrderService;
@@ -19,7 +19,7 @@ public class MessageReceiver {
 
     private final ModelMapper modelMapper;
 
-    @RabbitListener(queues = MessageConfig.CAR_REQUEST_QUEUE)
+    @RabbitListener(queues = Constants.CAR_REQUEST_QUEUE)
     public void receiveMessage(OrderDTO message) {
         if (Objects.isNull(message)) {
             return;

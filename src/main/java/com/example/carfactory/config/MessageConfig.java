@@ -10,13 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MessageConfig {
 
-    public static final String CAR_REQUEST_QUEUE = "carRequestQueue";
-
-    public static final String CAR_PRODUCED_QUEUE = "carProducedQueue";
-
     @Bean
     public Queue myQueue() {
-        return new Queue(CAR_REQUEST_QUEUE);
+        return new Queue(Constants.CAR_REQUEST_QUEUE);
     }
 
     @Bean

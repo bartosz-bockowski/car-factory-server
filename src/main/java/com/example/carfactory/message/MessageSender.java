@@ -1,6 +1,6 @@
 package com.example.carfactory.message;
 
-import com.example.carfactory.config.MessageConfig;
+import com.example.carfactory.config.Constants;
 import com.example.carfactory.domain.Order;
 import com.example.carfactory.dto.OrderDTO;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +17,6 @@ public class MessageSender {
     private final ModelMapper modelMapper;
 
     public void sendOrderDTO(Order order) {
-        rabbitTemplate.convertAndSend(MessageConfig.CAR_PRODUCED_QUEUE, modelMapper.map(order, OrderDTO.class));
+        rabbitTemplate.convertAndSend(Constants.CAR_PRODUCED_QUEUE, modelMapper.map(order, OrderDTO.class));
     }
 }
