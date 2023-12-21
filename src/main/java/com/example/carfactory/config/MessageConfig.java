@@ -1,5 +1,6 @@
 package com.example.carfactory.config;
 
+import com.example.carfactory.constants.Constants;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;

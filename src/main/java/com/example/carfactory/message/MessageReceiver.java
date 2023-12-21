@@ -1,6 +1,6 @@
 package com.example.carfactory.message;
 
-import com.example.carfactory.config.Constants;
+import com.example.carfactory.constants.Constants;
 import com.example.carfactory.domain.Order;
 import com.example.carfactory.dto.OrderDTO;
 import com.example.carfactory.service.OrderService;
